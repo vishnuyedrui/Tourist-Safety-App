@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 
+
 export default {
   darkMode: ["class"],
   content: ["./pages/**/*.{ts,tsx}", "./components/**/*.{ts,tsx}", "./app/**/*.{ts,tsx}", "./src/**/*.{ts,tsx}"],
@@ -22,6 +23,7 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          glow: "hsl(var(--primary-glow))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -47,6 +49,10 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        hero: {
+          primary: "hsl(var(--hero-primary))",
+          secondary: "hsl(var(--hero-secondary))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
@@ -57,29 +63,22 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        /* Authority System Colors */
-        warning: {
-          DEFAULT: "hsl(var(--warning))",
-          foreground: "hsl(var(--warning-foreground))",
-        },
-        authority: {
-          nav: "hsl(var(--authority-nav))",
-          "nav-foreground": "hsl(var(--authority-nav-foreground))",
-          active: "hsl(var(--authority-active))",
-          hover: "hsl(var(--authority-hover))",
-        },
-        alert: {
-          critical: "hsl(var(--alert-critical))",
-          high: "hsl(var(--alert-high))",
-          medium: "hsl(var(--alert-medium))",
-          low: "hsl(var(--alert-low))",
-        },
-        zone: {
-          safe: "hsl(var(--zone-safe))",
-          caution: "hsl(var(--zone-caution))",
-          danger: "hsl(var(--zone-danger))",
-          restricted: "hsl(var(--zone-restricted))",
-        },
+      },
+      fontFamily: {
+        heading: ["var(--font-heading)"],
+        body: ["var(--font-body)"],
+      },
+      backgroundImage: {
+        "gradient-hero": "var(--gradient-hero)",
+        "gradient-card": "var(--gradient-card)",
+        "gradient-accent": "var(--gradient-accent)",
+      },
+      boxShadow: {
+        elegant: "var(--shadow-elegant)",
+        card: "var(--shadow-card)",
+      },
+      transitionTimingFunction: {
+        smooth: "var(--transition-smooth)",
       },
       borderRadius: {
         lg: "var(--radius)",
